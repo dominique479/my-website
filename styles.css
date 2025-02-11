@@ -1,0 +1,66 @@
+/* Type Selector - Styles for the body */
+body {
+    font-family: 'Open Sans', sans-serif; /* Font styling */
+    background-color: #f0f0f0; /* Light gray background */
+    color: rgb(34, 34, 34); /* Dark gray text */
+    margin: 0;
+    padding: 0;
+}
+
+/* ID Selector - Styling for a specific section */
+#genres {
+    background-color: #C08497; /* Dusty Rose background */
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+/* Class Selector - Styling reusable elements */
+.highlight {
+    color: #ff4500; /* Orange-red text */
+    font-weight: bold;
+}
+
+/* Relational Selector - Styling links inside paragraphs */
+p a {
+    color: #0077cc; /* Blue links */
+    text-decoration: none;
+}
+
+p a:hover { /* Pseudo-class: Changes color on hover */
+    text-decoration: underline;
+}
+
+/* Combination Selector - Targets a paragraph inside a section */
+section > p {
+    font-size: 1.2rem;
+}
+
+/* Attribute Selector - Styles all images with alt attributes */
+img[alt] {
+    border: 2px solid #333;
+    border-radius: 5px;
+    max-width: 100%;
+}
+
+/* Pseudo-element - Changes the first letter of paragraphs */
+p::first-letter {
+    font-size: 2rem;
+    color: #C08497;
+    font-weight: bold;
+}
+
+/* Font Styling - Another example */
+h1, h2 {
+    font-family: 'Playfair Display', serif; /* Custom font */
+    color: #222; /* Dark gray */
+}
+
+/* Relative Unit Usage */
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+ul {
+    padding-left: 1.5rem;
+}
