@@ -9,27 +9,41 @@
 </head>
 
 <body>
-    <main>
-        <h1>Anime Genres</h1>
-
-        <div class="container">
-            <section class="column">
-                <h2>Action</h2>
-                <p>High-paced battles and adventure. Example: <em>Attack on Titan</em></p>
-            </section>
-            <section class="column">
-                <h2>Romance</h2>
-                <p>Love stories that touch the heart. Example: <em>Your Name</em></p>
-            </section>
-            <section class="column">
-                <h2>Comedy</h2>
-                <p>Hilarious moments and fun characters. Example: <em>Gintama</em></p>
-            </section>
-        </div>
-
+    <header>
         <nav>
-            <a href="index.html">Back to Home</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="genres.html">Genres</a></li>
+                <li><a href="recommendations.html">Recommendations</a></li>
+            </ul>
         </nav>
+    </header>
+
+    <main>
+        <!-- Move id="genres" here for clearer targeting -->
+        <section id="genres">
+            <h1>Anime Genres</h1>
+
+            <div class="container">
+                <!-- Action Genre -->
+                <section class="column">
+                    <h2>Action</h2>
+                    <p>High-paced battles and adventure. Example: <em>Attack on Titan</em></p>
+                </section>
+
+                <!-- Romance Genre -->
+                <section class="column">
+                    <h2>Romance</h2>
+                    <p>Love stories that touch the heart. Example: <em>Your Name</em></p>
+                </section>
+
+                <!-- Comedy Genre -->
+                <section class="column">
+                    <h2>Comedy</h2>
+                    <p>Hilarious moments and fun characters. Example: <em>Gintama</em></p>
+                </section>
+            </div>
+        </section>
     </main>
 
     <footer>

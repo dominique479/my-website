@@ -21,6 +21,7 @@ h1 {
     text-align: center;
     color: rgb(200, 50, 100);
     margin-bottom: 20px;
+    font-size: 2.5rem; /* Set the font size explicitly */
 }
 
 /* Paragraph */
@@ -35,14 +36,6 @@ p {
     font-weight: bold;
 }
 
-/* Section Styling */
-section {
-    margin-bottom: 20px;
-    padding: 15px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-}
-
 /* Links */
 a {
     color: #ff4081;
@@ -54,17 +47,48 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Navigation */
+/* Navigation Bar */
 nav {
+    background-color: #ff4081;
+    padding: 10px;
     text-align: center;
-    margin-top: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Prevent content from being hidden under the navbar */
+body {
+    padding-top: 60px;
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #ff9a9e;
+    background-color: #ff4081;
     color: white;
     margin-top: 20px;
 }
@@ -74,6 +98,7 @@ footer {
     display: flex;
     gap: 20px;
     justify-content: space-between;
+    flex-wrap: wrap; /* Allow for wrapping columns on smaller screens */
 }
 
 .column {
@@ -83,4 +108,67 @@ footer {
     border: 2px solid #ddd;
     border-radius: 8px;
     text-align: center;
+    min-width: 250px; /* Prevents columns from shrinking too small */
+}
+
+/* Scalable Image */
+img {
+    max-width: 100%;  /* Makes the image responsive and scales with the container */
+    height: auto;     /* Maintains aspect ratio */
+    display: block;   /* Prevents extra space below the image */
+}
+
+/* Media Queries */
+
+/* Tablet breakpoint (768px) */
+@media screen and (max-width: 768px) {
+    /* Adjusting navigation to be stacked vertically */
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Main content width adjustment for tablets */
+    main {
+        width: 90%;
+    }
+
+    /* Stack columns vertically on tablets */
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .column {
+        flex: none;
+        width: 100%;  /* Full width columns on tablet */
+        padding: 15px;
+    }
+}
+
+/* Mobile breakpoint (480px) */
+@media screen and (max-width: 480px) {
+    /* Reduce font size and spacing */
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    main {
+        width: 100%; /* Full width on mobile */
+        padding: 10px;
+    }
+
+    .container {
+        flex-direction: column; /* Stack items vertically */
+        gap: 15px;
+    }
+
+    .column {
+        width: 100%; /* Full width columns */
+        padding: 15px;  /* Less padding on mobile */
+    }
+
+    nav ul {
+        font-size: 1rem; /* Reduce font size in the navbar */
+    }
 }
