@@ -21,30 +21,13 @@ h1 {
     text-align: center;
     color: rgb(200, 50, 100);
     margin-bottom: 20px;
-    font-size: 2.5rem; /* Set the font size explicitly */
+    font-size: 2.5rem;
 }
 
 /* Paragraph */
 p {
     font-size: 1.2rem;
     margin-bottom: 15px;
-}
-
-/* Highlights */
-.highlight {
-    color: #ff4081;
-    font-weight: bold;
-}
-
-/* Links */
-a {
-    color: #ff4081;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-a:hover {
-    text-decoration: underline;
 }
 
 /* Navigation Bar */
@@ -79,11 +62,6 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Prevent content from being hidden under the navbar */
-body {
-    padding-top: 60px;
-}
-
 /* Footer */
 footer {
     text-align: center;
@@ -93,82 +71,60 @@ footer {
     margin-top: 20px;
 }
 
-/* Three-Column Layout */
-.container {
-    display: flex;
+/* Grid Layout for genres section */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    justify-content: space-between;
-    flex-wrap: wrap; /* Allow for wrapping columns on smaller screens */
+    margin: 20px 0;
 }
 
-.column {
-    flex: 1;
-    padding: 20px;
+.grid-item {
     background-color: white;
+    padding: 20px;
     border: 2px solid #ddd;
     border-radius: 8px;
     text-align: center;
-    min-width: 250px; /* Prevents columns from shrinking too small */
 }
 
-/* Scalable Image */
-img {
-    max-width: 100%;  /* Makes the image responsive and scales with the container */
-    height: auto;     /* Maintains aspect ratio */
-    display: block;   /* Prevents extra space below the image */
+.grid-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Link Text Styling */
+a {
+    color: #ff4081;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Specific Pink Color for Crunchyroll Link & Recommendations Title */
+#crunchyroll-link {
+    color: #ff4081;
+}
+
+h2, .anime-title, .watch-trailer {
+    color: #ff4081;
 }
 
 /* Media Queries */
-
-/* Tablet breakpoint (768px) */
 @media screen and (max-width: 768px) {
-    /* Adjusting navigation to be stacked vertically */
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    /* Main content width adjustment for tablets */
-    main {
-        width: 90%;
-    }
-
-    /* Stack columns vertically on tablets */
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .column {
-        flex: none;
-        width: 100%;  /* Full width columns on tablet */
-        padding: 15px;
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Mobile breakpoint (480px) */
 @media screen and (max-width: 480px) {
-    /* Reduce font size and spacing */
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
     h1 {
-        font-size: 1.5rem;
-    }
-
-    main {
-        width: 100%; /* Full width on mobile */
-        padding: 10px;
-    }
-
-    .container {
-        flex-direction: column; /* Stack items vertically */
-        gap: 15px;
-    }
-
-    .column {
-        width: 100%; /* Full width columns */
-        padding: 15px;  /* Less padding on mobile */
-    }
-
-    nav ul {
-        font-size: 1rem; /* Reduce font size in the navbar */
+        font-size: 1.8rem;
     }
 }
