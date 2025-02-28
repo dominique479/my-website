@@ -92,6 +92,21 @@ footer {
     height: auto;
 }
 
+/* Recommendations Section Layout */
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.column {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+}
+
 /* Link Text Styling */
 a {
     color: #ff4081;
@@ -112,10 +127,29 @@ h2, .anime-title, .watch-trailer {
     color: #ff4081;
 }
 
-/* Media Queries */
+/* Responsive Design */
+/* Adjust Navigation Menu for Mobile */
 @media screen and (max-width: 768px) {
     .grid-container {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Make the navigation a column layout */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul li {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    /* Stack Recommendations Section */
+    .container {
+        flex-direction: column;
     }
 }
 
