@@ -1,0 +1,21 @@
+Peer Review Response
+
+Review 1:
+Feedback: The website's color scheme is visually appealing, but the navigation bar text could have more contrast for readability.
+Response: I will adjust the navigation bar's text color to improve readability by increasing contrast.
+
+Review 2:
+Feedback: The grid layout for the genres section looks great, but on smaller screens, the text and images could be centered better.
+Response: I will modify the responsive design to ensure better centering and alignment for smaller screens.
+
+Review 3:
+Feedback: The footer looks nice, but adding some padding to the top might improve spacing.
+Response: I will increase the top padding in the footer to create a more balanced layout.
+
+Review 4:
+Feedback: The external links stand out well, but consider adding an underline effect on hover for better usability.
+Response: I will update the link hover effect to include an underline for better visual feedback.
+
+Review 5:
+Feedback: The page layout is well-organized, but the mobile version of the navigation menu could use more spacing between items.
+Response: I will add more spacing between navigation items in the mobile view for better accessibility.

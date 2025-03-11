@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    background: linear-gradient(to right, #ff9a9e, #fad0c4); /* Soft pink gradient */
 }
 
 /* Main Content */
@@ -19,9 +19,10 @@ main {
 /* Header */
 h1 {
     text-align: center;
-    color: rgb(200, 50, 100);
+    color: rgb(200, 50, 100); /* Pink color */
     margin-bottom: 20px;
     font-size: 2.5rem;
+    font-family: 'Nunito', sans-serif; /* Apply Nunito only to h1 */
 }
 
 /* Paragraph */
@@ -32,7 +33,7 @@ p {
 
 /* Navigation Bar */
 nav {
-    background-color: #ff4081;
+    background-color: #ff4081; /* Pink */
     padding: 10px;
     text-align: center;
 }
@@ -66,30 +67,56 @@ nav ul li a:hover {
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #ff4081;
+    background-color: #ff4081; /* Pink */
     color: white;
     margin-top: 20px;
 }
 
-/* Grid Layout for genres section */
+/* Grid layout for genres */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Dynamic column layout */
     gap: 20px;
-    margin: 20px 0;
-}
-
-.grid-item {
-    background-color: white;
     padding: 20px;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    text-align: center;
+    margin-bottom: 20px; /* Reduces space below the grid */
 }
 
+/* Individual genre items */
+.grid-item {
+    background-color: #f7f7f7; /* Light background for each genre */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow */
+    overflow: hidden; /* Hide overflow for rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    padding: 10px;
+}
+
+/* Hover effect */
+.grid-item:hover {
+    transform: translateY(-10px); /* Slight lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* More intense shadow on hover */
+}
+
+/* Style for genre images */
 .grid-item img {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Title of the genre */
+.grid-item h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff4081; /* Pink color */
+    margin-bottom: 10px;
+}
+
+/* Description text */
+.grid-item p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
 }
 
 /* Recommendations Section Layout */
@@ -97,6 +124,7 @@ footer {
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    margin-top: 20px; /* Reduce top margin */
 }
 
 .column {
@@ -107,9 +135,49 @@ footer {
     border: 2px solid #ddd;
 }
 
+/* Add spacing between each anime in the list */
+ul li {
+    margin-bottom: 20px; /* Adjust space between list items */
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+table th {
+    background-color: #ff4081; /* Pink for header */
+    color: white;
+}
+
+table tr:nth-child(even) td {
+    background-color: #f2f2f2;
+}
+
+/* Hover Effect for Table Rows */
+table tr:hover td {
+    background-color: #ff9a9e; /* Hover effect for table rows */
+    cursor: pointer;
+}
+
+/* FontAwesome Play Circle Icon */
+.fa-play-circle {
+    margin-left: 5px;
+    color: #ff4081; /* Pink color for play circle icon */
+}
+
 /* Link Text Styling */
 a {
-    color: #ff4081;
+    color: #ff4081; /* Pink links */
     text-decoration: none;
     font-weight: bold;
 }
@@ -118,28 +186,53 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Specific Pink Color for Crunchyroll Link & Recommendations Title */
-#crunchyroll-link {
-    color: #ff4081;
+/* Genre Video Links */
+.grid-item a {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #ff4081; /* Pink color for the link */
+    font-size: 1rem;
+    font-weight: bold;
 }
 
-h2, .anime-title, .watch-trailer {
-    color: #ff4081;
+.grid-item a i {
+    margin-right: 5px; /* Space between the icon and text */
+}
+
+/* Hover effect for Watch Trailer links */
+.grid-item a:hover {
+    color: #ff9a9e; /* Lighter pink on hover */
+    text-decoration: underline;
+}
+
+/* Back to Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff4081; /* Pink */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 1.5rem;
+}
+
+#back-to-top:hover {
+    background-color: #ff9a9e; /* Lighter pink on hover */
 }
 
 /* Responsive Design */
-/* Adjust Navigation Menu for Mobile */
 @media screen and (max-width: 768px) {
-    .grid-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    /* Make the navigation a column layout */
     nav ul {
         flex-direction: column;
         align-items: center;
     }
-    
+
     nav ul li {
         display: block;
         width: 100%;
@@ -147,18 +240,32 @@ h2, .anime-title, .watch-trailer {
         padding: 10px 0;
     }
 
-    /* Stack Recommendations Section */
     .container {
         flex-direction: column;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    /* Grid layout adjustments for mobile */
+    .grid-container {
+        padding: 10px;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .grid-container {
-        grid-template-columns: 1fr;
-    }
-
     h1 {
         font-size: 1.8rem;
+    }
+
+    table th, table td {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    #back-to-top {
+        padding: 10px;
+        font-size: 1.2rem;
     }
 }
