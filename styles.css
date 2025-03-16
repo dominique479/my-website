@@ -3,7 +3,15 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #ff9a9e, #fad0c4); /* Soft pink gradient */
+    background: url('images/animecity.jpg') no-repeat center center fixed; /* Add background image */
+    background-size: cover; /* Ensures the image covers the full screen */
+}
+
+video {
+    display: block;
+    width: 80%;   /* Makes the video 50% of its container's width */
+    height: auto; /* Maintain aspect ratio */
+    margin: 20px auto; /* Centers the video horizontally with space above and below */
 }
 
 /* Main Content */
@@ -11,7 +19,7 @@ main {
     width: 80%;
     margin: 20px auto;
     padding: 20px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -19,10 +27,23 @@ main {
 /* Header */
 h1 {
     text-align: center;
-    color: rgb(200, 50, 100); /* Pink color */
+    color: #4a2c61; /* Dark purple */
     margin-bottom: 20px;
     font-size: 2.5rem;
-    font-family: 'Nunito', sans-serif; /* Apply Nunito only to h1 */
+    font-family: 'Merriweather', bold; /* Apply Merriweather only to h1 */
+}
+
+h2 {
+    text-align: center;
+    color: #4a2c61; /* Dark purple */
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-family: 'Outfit', sans-serif; /* Apply Outfit only to h2 */
+}
+
+/* Specific rule to left-align the "h2 headings in index.html */
+h2.no-center {
+    text-align: left;
 }
 
 /* Paragraph */
@@ -31,46 +52,59 @@ p {
     margin-bottom: 15px;
 }
 
-/* Navigation Bar */
+/* Navigation Bar (Box Style) */
 nav {
-    background-color: #ff4081; /* Pink */
-    padding: 10px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: #1f1027; /* Darker purple */
+    padding: 10px 0;
 }
 
 nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
-    display: inline;
+    margin: 0 10px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: white;
-    font-size: 1.2rem;
+    font-size: 1rem; /* Reduce font size for smaller text */
     font-weight: bold;
-    padding: 10px;
+    padding: 10px 20px; /* Reduce padding for smaller buttons */
+    border-radius: 10px;
+    background-color: #1f1027; /* Darker purple */
+    display: block; /* Makes the box clickable */
+    width: 160px; /* Reduce width of the links */
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    background-color: #4a2c61; /* Lighter dark purple */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Active Tab Styling (Add this to the active page link) */
+nav ul li a.active {
+    background-color: #3e1c3c; /* Darker purple for active tab */
 }
 
 /* Footer */
 footer {
     text-align: center;
-    padding: 10px;
-    background-color: #ff4081; /* Pink */
+    padding: 5px; /* Reduced padding for a smaller footer */
+    background-color: #1f1027; /* Darker purple */
     color: white;
     margin-top: 20px;
+    font-size: 0.9rem; /* Smaller font size */
 }
+
 
 /* Grid layout for genres */
 .grid-container {
@@ -83,7 +117,7 @@ footer {
 
 /* Individual genre items */
 .grid-item {
-    background-color: #f7f7f7; /* Light background for each genre */
+    background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow */
     overflow: hidden; /* Hide overflow for rounded corners */
@@ -108,14 +142,14 @@ footer {
 .grid-item h2 {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #ff4081; /* Pink color */
+    color: #4a2c61; /* Dark purple */
     margin-bottom: 10px;
 }
 
 /* Description text */
 .grid-item p {
     font-size: 1rem;
-    color: #666;
+    color: #333; /* Dark gray for text */
     line-height: 1.5;
 }
 
@@ -129,7 +163,7 @@ footer {
 
 .column {
     flex: 1;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
     border-radius: 8px;
     border: 2px solid #ddd;
@@ -145,39 +179,54 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    background-color: #d6a9d6; /* Lighter purple for table background */
 }
 
-table th, table td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-    background-color: #f9f9f9;
-}
-
+/* Table Header */
 table th {
-    background-color: #ff4081; /* Pink for header */
+    background-color: #4a2c61; /* Dark purple for header */
     color: white;
+    padding: 10px;
+    text-align: center; /* Centering header text */
+    border-bottom: 1px solid #ddd;
 }
+
+/* Table Data */
+table td {
+    padding: 10px;
+    text-align: center; /* Aligning table data cells to the center */
+    border-bottom: 1px solid #ddd;
+    background-color: #e1c2e1; /* Light purple for cells */
+    color: #333; /* Dark gray text */
+}
+
 
 table tr:nth-child(even) td {
-    background-color: #f2f2f2;
+    background-color: #d6a9d6; /* Lighter purple for even rows */
 }
 
 /* Hover Effect for Table Rows */
 table tr:hover td {
-    background-color: #ff9a9e; /* Hover effect for table rows */
+    background-color: #4a2c61; /* Dark purple hover effect */
+    color: white;
     cursor: pointer;
 }
 
 /* FontAwesome Play Circle Icon */
 .fa-play-circle {
     margin-left: 5px;
-    color: #ff4081; /* Pink color for play circle icon */
+    color: #4a2c61; /* Dark purple color for play circle icon */
+}
+
+/* FontAwesome Star Icon */
+.rating i {
+    color: #FFD700; /* Gold color for the stars */
+    font-size: 30px; /* Size of the stars */
 }
 
 /* Link Text Styling */
 a {
-    color: #ff4081; /* Pink links */
+    color: #8a4d9d; /* Light purple */
     text-decoration: none;
     font-weight: bold;
 }
@@ -192,7 +241,7 @@ a:hover {
     align-items: center;
     margin-top: 10px;
     text-decoration: none;
-    color: #ff4081; /* Pink color for the link */
+    color: #8a4d9d; /* Light purple */
     font-size: 1rem;
     font-weight: bold;
 }
@@ -203,7 +252,7 @@ a:hover {
 
 /* Hover effect for Watch Trailer links */
 .grid-item a:hover {
-    color: #ff9a9e; /* Lighter pink on hover */
+    color: #4a2c61; /* Dark purple hover effect */
     text-decoration: underline;
 }
 
@@ -212,7 +261,7 @@ a:hover {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #ff4081; /* Pink */
+    background-color: #4a2c61; /* Dark purple */
     color: white;
     border: none;
     border-radius: 50%;
@@ -223,7 +272,7 @@ a:hover {
 }
 
 #back-to-top:hover {
-    background-color: #ff9a9e; /* Lighter pink on hover */
+    background-color: #8a4d9d; /* Lighter purple on hover */
 }
 
 /* Responsive Design */
