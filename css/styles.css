@@ -2,7 +2,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     background: url('../images/yourname_bg.jpg') no-repeat center center fixed;
     background-size: cover;
 }
@@ -26,22 +26,19 @@ main {
 
 /* Header */
 h1,
-h2,
-h3,
-h4 {
+h2 {
     text-align: center;
     margin-bottom: 20px;
+    color: #4a2c61;
 }
 
 h1 {
-    color: #4a2c61;
     font-size: 2.5rem;
-    font-family: 'Merriweather', bold;
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
 }
 
-h2,
-h3 {
-    color: #4a2c61;
+h2 {
     font-size: 2.5rem;
     font-family: 'Outfit', sans-serif;
 }
@@ -50,13 +47,7 @@ h2.no-center {
     text-align: left;
 }
 
-h4 {
-    color: black;
-    font-size: 1.4rem;
-    font-family: Arial, sans-serif;
-}
-
-/* Paragraph */
+/* Paragraphs */
 p {
     font-size: 1.2rem;
     margin-bottom: 15px;
@@ -68,15 +59,14 @@ nav {
     justify-content: center;
     background-color: #1f1027;
     padding: 10px 0;
-    flex-wrap: wrap;
-    width: 100%;
     position: relative;
+    width: 100%;
 }
 
 nav ul {
     display: flex;
     justify-content: center;
-    list-style-type: none;
+    list-style: none;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -94,8 +84,6 @@ nav ul li a {
     padding: 10px 20px;
     border-radius: 10px;
     background-color: #1f1027;
-    display: inline-block;
-    text-align: center;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
@@ -104,31 +92,47 @@ nav ul li a:hover {
     transform: translateY(-2px);
 }
 
-/* Active Tab Styling */
 nav ul li a.active {
     background-color: #3e1c3c;
 }
 
-/* Responsive Navigation for Small Screens */
-@media screen and (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
+#menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
+#menu li {
+    padding: 15px;
+}
 
-    nav ul li {
-        width: 100%;
-        text-align: center;
-    }
+#menu a {
+    color: white;
+    text-decoration: none;
+    font-family: Outfit, sans-serif;
+    font-size: 16px;
+}
 
-    nav ul li a {
-        width: auto;
-    }
+.menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    margin: 10px;
+}
+
+.hamburger .bar {
+    background-color: white;
+    height: 4px;
+    width: 100%;
 }
 
 /* Footer */
@@ -283,127 +287,31 @@ a:hover {
     color: #8a4d9d;
 }
 
-/* Top Anime Grid */
-.top-anime-grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    /* Responsive grid */
-    gap: 20px;
-    padding: 20px;
-    /* Padding for spacing inside the grid */
-    margin: 0 auto;
-    /* Center the grid container */
-}
-
-/* Center the h2 above the grid */
-.top-anime-grid-container h2 {
-    text-align: center;
-    grid-column: 1 / -1;
-    /* Make h2 span both columns */
-    margin-bottom: 1rem;
-}
-
-/* Grid container for anime choices */
-.top-anime-grid-container .grid-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* Center items horizontally */
-    text-align: center;
-    justify-content: center;
-    /* Center items vertically */
-    padding: 20px;
-    /* Padding inside each grid item */
-    background-color: #fff;
-    /* Background color for each item */
-    border-radius: 10px;
-    /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    /* Box shadow for depth */
-    transition: 0.3s ease;
-    /* Smooth transition on hover */
-}
-
-
-/* Increase image size while keeping them centered */
-.top-anime-grid-container .grid-item img {
-    width: 100%;
-    /* Makes the image fill the grid item */
-    max-width: 350px;
-    /* Max width for the images */
-    height: auto;
-    /* Maintains aspect ratio */
-    object-fit: cover;
-    border-radius: 10px;
-    display: block;
-    margin: 0 auto;
-    /* Center the image */
-}
-
-/* Style for h3 heading bar */
-.top-anime-grid-container .grid-item h3 {
-    text-align: center;
-    background-color: #4a2c61;
-    color: white;
-    /* Text color for contrast */
-    padding: 12px;
-    font-size: 1.7rem;
-    /* Slightly larger font */
-    font-weight: bold;
-    width: 100%;
-    /* Makes it span the full width */
-    display: block;
-    /* Ensures it behaves like a full-width element */
-    border-radius: 8px;
-    margin-bottom: 10px;
-    /* Space between the h3 and content */
-}
-
-/* Style for the links */
-.top-anime-grid-container .grid-item a {
-    padding: 10px 15px;
-    background-color: #4a2c61;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: 0.3s ease-in-out;
-    display: inline-block;
-    /* Ensures proper alignment */
-    margin-top: 10px;
-    /* Space between the image and link */
-}
-
-/* Hover effect for links */
-.top-anime-grid-container .grid-item a:hover {
-    background-color: #8a4d9d;
-    color: white;
-}
-
-
 /* Back to Top Button */
 #back-to-top {
     position: fixed;
     bottom: 20px;
     right: 20px;
+    padding: 10px 20px;
     background-color: #4a2c61;
     color: white;
-    border: none;
-    border-radius: 50%;
-    padding: 15px;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    font-size: 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: Outfit, sans-serif;
+    font-size: 16px;
+    display: inline-block;
+    transition: transform 0.3s ease;
 }
 
 #back-to-top:hover {
     background-color: #8a4d9d;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+    /* Slightly enlarge the button on hover */
 }
 
-/* Media Queries for Responsive Layout */
-@media screen and (max-width: 1199px) {
+/* Media Queries - Grouped Together */
+
+@media (max-width: 1200px) {
 
     .genres-grid-container,
     .rec-grid-container {
@@ -411,17 +319,42 @@ a:hover {
     }
 }
 
-@media screen and (max-width: 767px) {
+
+@media (max-width: 768px) {
+
+    /* Hamburger Menu */
+    .hamburger {
+        display: flex;
+    }
+
+    #menu {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #1f1027;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+    }
+
+    #menu li {
+        padding: 15px;
+    }
+
+    .menu-toggle:checked+.hamburger+#menu {
+        display: flex;
+    }
+
+    /* Back to Top Button */
+    #back-to-top {
+        right: 10px;
+        bottom: 10px;
+    }
 
     .genres-grid-container,
     .rec-grid-container {
         grid-template-columns: 1fr;
-        /* Single column for small screens */
-        padding: 10px;
-    }
-
-    .top-anime-grid-container {
-        grid-template-columns: 1fr;
-        /* Single column for small screens */
+        gap: 15px;
     }
 }

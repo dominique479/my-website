@@ -4,305 +4,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Explore top anime lists across various genres, including action, romance, comedy, and more.">
+    <meta name="description" content="Explore top anime lists across various genres, including action, romance, comedy, and more.">
     <title>Top Anime Lists</title>
     <link rel="stylesheet" href="../css/styles.css">
-
-    <!-- Link to Merriweather font from Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;600&display=swap" rel="stylesheet">
-
-    <!-- Favicon Link -->
     <link rel="icon" href="../favicon/favicon.ico" type="image/x-icon">
-
-    <!-- FontAwesome for video icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
     <!-- Navigation Bar -->
     <nav>
-        <ul>
-            <!-- Corrected links to HTML files -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </label>
+        <ul id="menu">
             <li><a href="../html/index.html">Home</a></li>
             <li><a href="../html/genres.html">Genres</a></li>
             <li><a href="../html/recommendations.html">Recommendations</a></li>
             <li><a href="../html/top-anime.html">Top Anime Lists</a></li>
         </ul>
     </nav>
+
     <!-- Main content starts here -->
     <main>
-        <h1>Top Anime Lists by Samantha and I <i></i></h1>
-        <p>Explore the top anime across various categories! Check out the lists by our classmate Samantha and I below
-            and discover new favorites.</p>
+        <h1>Top Anime Lists<i></i></h1>
+        <p>Explore the top anime across various categories! Check out the lists by our classmate Samantha and I below and discover new favorites.</p>
 
         <!-- Top Anime Categories -->
-        <section id="top-anime-all-time" class="top-anime-grid-container">
+        <section id="top-anime-all-time">
             <h2>Top Anime of All Time</h2>
-            <div class="grid-container">
-                <div class="grid-item">
-                    <h3>Sam's choice</h3>
-                    <h4>Fullmetal Alchemist</h4>
-                    <img src="../images/fullmetal.jpg" alt="A photo of Fullmetal Alchemist" width="100%" height="auto">
-                    <a href="https://www.youtube.com/watch?v=35cs5zFr2h8&t=21s" target="_blank">
-                        <i class="fa-solid fa-video"></i> Watch Trailer
-                    </a>
-                    <h4>Frieren: Beyond Journey's End</h4>
-                    <img src="../images/frieren.jpg" alt="A photo of Frieren" width="100%" height="auto">
-                    <a href="https://www.youtube.com/watch?v=Iwr1aLEDpe4" target="_blank">
-                        <i class="fa-solid fa-video"></i> Watch Trailer
-                    </a>
-                    <h4>Puella Magi Madoka Magica</h4>
-                    <img src="../images/madoka.jpg" alt="A photo of Madoka Magica" width="100%" height="auto">
-                    <a href="https://www.youtube.com/watch?v=6CTHwEZK2JA" target="_blank">
-                        <i class="fa-solid fa-video"></i> Watch Trailer
-                    </a>
-                </div>
-
-                <div class="grid-item">
-                    <h3>My choice</h3>
-                    <h4>Naruto</h4>
-                    <img src="../images/naruto.jpg" alt="A photo of Naruto" width="100%" height="auto">
-                    <a href="https://www.youtube.com/watch?v=-G9BqkgZXRA" target="_blank">
-                        <i class="fa-solid fa-video"></i> Watch Trailer
-                    </a>
-                    <h4>Soul Eater</h4>
-                    <img src="../images/soul-eater.jpg" alt="A photo of Soul Eater" width="100%" height="auto">
-                    <a href="https://www.youtube.com/watch?v=DTTCUzmHKvI" target="_blank">
-                        <i class="fa-solid fa-video"></i> Watch Trailer
-                    </a>
-                    <h4>Hunter x Hunter</h4>
-                    <img src="../images/hunterxhunter.jpg" alt="A photo of Hunter x Hunter" width="100%" height="auto">
-                    <a href="https://www.youtube.com/watch?v=d6kBeJjTGnY" target="_blank">
-                        <i class="fa-solid fa-video"></i> Watch Trailer
-                    </a>
-                </div>
-            </div>
+            <table>
+                <tr>
+                    <th>My Choices</th>
+                    <th>Trailer</th>
+                    <th>Sam's Choices</th>
+                    <th>Trailer</th>
+                </tr>
+                <tr>
+                    <td>Naruto (2002)</td>
+                    <td><a href="https://www.youtube.com/watch?v=-G9BqkgZXRA" target="_blank">Watch Trailer</a></td>
+                    <td>Fullmetal Alchemist</td>
+                    <td><a href="https://www.youtube.com/watch?v=35cs5zFr2h8&t=21s" target="_blank">Watch Trailer</a></td>
+                </tr>
+                <tr>
+                    <td>Soul Eater</td>
+                    <td><a href="https://www.youtube.com/watch?v=DTTCUzmHKvI" target="_blank">Watch Trailer</a></td>
+                    <td>Frieren: Beyond Journey's End</td>
+                    <td><a href="https://www.youtube.com/watch?v=Iwr1aLEDpe4" target="_blank">Watch Trailer</a></td>
+                </tr>
+                <tr>
+                    <td>Hunter x Hunter</td>
+                    <td><a href="https://www.youtube.com/watch?v=d6kBeJjTGnY" target="_blank">Watch Trailer</a></td>
+                    <td>Puella Magi Madoka Magica</td>
+                    <td><a href="https://www.youtube.com/watch?v=6CTHwEZK2JA" target="_blank">Watch Trailer</a></td>
+                </tr>
+            </table>
         </section>
 
-        <section id="top-action" class="top-anime-grid-container">
+        <section id="top-action">
             <h2>Top Action Anime</h2>
-            <div>
-                <div class="grid-item">
-                    <h3>Sam's choice</h3>
-                    <h4>Chainsaw Man</h4>
-                    <img src="../images/chainsaw.jpg" alt="A photo of Chainsaw Man" width="100%" height="auto">
-                    <a href="https://www.youtube.com/watch?v=l96zmDlWCBk" target="_blank">
-                        <i class="fa-solid fa-video"></i> Watch Trailer
-                    </a>
-                    <h4>My Hero Academia</h4>
-                    <img src="../images/myhero.jpg" alt="A photo of My Hero Academia" width="100%" height="auto">
-                    <a href="https://www.youtube.com/watch?v=LqJQqcDQxBg" target="_blank">
-                        <i class="fa-solid fa-video"></i> Watch Trailer
-                    </a>
-                    <h4>YuYu Hakusho</h4>
-                    <img src="../images/yuyu.jpg" alt="A photo of YuYu Hakusho" width="100%" height="auto">
-                    <a href="https://www.youtube.com/watch?v=bGc1Na8mlw0" target="_blank">
-                        <i class="fa-solid fa-video"></i> Watch Trailer
-                    </a>
-                </div>
-
-                <div class="grid-item">
-                    <h3>My choice</h3>
-                    <h4>Fairytail</h4>
-                    <img src="../images/fairytail.jpg" alt="A photo of Fairytail" width="100%" height="auto">
-                    <a href="https://www.youtube.com/watch?v=mAAKPx-ndAg" target="_blank">
-                        <i class="fa-solid fa-video"></i> Watch Trailer
-                    </a>
-                    <h4>Jujutsu Kaisen</h4>
-                    <img src="../images/jjk.jpg" alt="A photo of Jujutsu Kaisen" width="100%" height="auto">
-                    <a href="https://www.youtube.com/watch?v=pkKu9hLT-t8" target="_blank">
-                        <i class="fa-solid fa-video"></i> Watch Trailer
-                    </a>
-                    <h4>Demon Slayer</h4>
-                    <img src="../images/demonslayer.jpg" alt="A photo of Demon Slayer" width="100%" height="auto">
-                    <a href="https://www.youtube.com/watch?v=VQGCKyvzIM4" target="_blank">
-                        <i class="fa-solid fa-video"></i> Watch Trailer
-                    </a>
-                </div>
-            </div>
+            <table>
+                <tr>
+                    <th>My Choices</th>
+                    <th>Trailer</th>
+                    <th>Sam's Choices</th>
+                    <th>Trailer</th>
+                </tr>
+                <tr>
+                    <td>Fairytail</td>
+                    <td><a href="https://www.youtube.com/watch?v=mAAKPx-ndAg" target="_blank">Watch Trailer</a></td>
+                    <td>Chainsaw Man</td>
+                    <td><a href="https://www.youtube.com/watch?v=l96zmDlWCBk" target="_blank">Watch Trailer</a></td>
+                </tr>
+                <tr>
+                    <td>Jujutsu Kaisen</td>
+                    <td><a href="https://www.youtube.com/watch?v=pkKu9hLT-t8" target="_blank">Watch Trailer</a></td>
+                    <td>My Hero Academia</td>
+                    <td><a href="https://www.youtube.com/watch?v=LqJQqcDQxBg" target="_blank">Watch Trailer</a></td>
+                </tr>
+                <tr>
+                    <td>Demon Slayer</td>
+                    <td><a href="https://www.youtube.com/watch?v=VQGCKyvzIM4" target="_blank">Watch Trailer</a></td>
+                    <td>YuYu Hakusho</td>
+                    <td><a href="https://www.youtube.com/watch?v=bGc1Na8mlw0" target="_blank">Watch Trailer</a></td> 
+                </tr>
+            </table>
         </section>
 
-        <section id="top-romance" class="top-anime-grid-container">
+        <section id="top-romance">
             <h2>Top Romance Anime</h2>
-            <div>
-                <div class="grid-item">
-                    <h3>Sam's choice</h3>
-                    <h4>Orange</h4>
-                    <img src="../images/orange.jpg" alt="A photo of Orange" width="100%" height="auto">
-                    <a href="https://www.youtube.com/watch?v=G9CzaN3WyKs" target="_blank">
-                        <i class="fa-solid fa-video"></i> Watch Trailer
-                    </a>
-                    <h4>Fruits Basket</h4>
-                    <img src="../images/fruits-basket.jpg" alt="A photo of Fruits Basket" width="100%" height="auto">
-                    <a href="https://www.youtube.com/watch?v=Wz0P0mYYY0Q" target="_blank">
-                        <i class="fa-solid fa-video"></i> Watch Trailer
-                    </a>
-                    <h4>Komi Can't Communicate</h4>
-                    <img src="../images/komi.jpg" alt="A photo of Komi Can't Communicate" width="100%" height="auto">
-                    <a href="https://www.youtube.com/watch?v=tLdLTSnmnoA" target="_blank">
-                        <i class="fa-solid fa-video"></i> Watch Trailer
-                    </a>
-                </div>
-
-                <div class="grid-item">
-                    <h3>My choice</h3>
-                    <h4>Your Name</h4>
-                    <img src="../images/yourname.jpg" alt="A photo of Your Name" width="100%" height="auto">
-                    <a href="https://www.youtube.com/watch?v=xU47nhruN-Q" target="_blank">
-                        <i class="fa-solid fa-video"></i> Watch Trailer
-                    </a>
-                    <h4>Kaguya Sama: Love is War</h4>
-                    <img src="../images/kaguya.jpg" alt="A photo of Kaguya Sama: Love is War" width="100%"
-                        height="auto">
-                    <a href="https://www.youtube.com/watch?v=rZ95aZmQu_8" target="_blank">
-                        <i class="fa-solid fa-video"></i> Watch Trailer
-                    </a>
-                    <h4>I Want to Eat Your Pancreas</h4>
-                    <img src="../images/i-want-to-eat.jpg" alt="A photo of I Want to Eat Your Pancreas" width="100%"
-                        height="auto">
-                    <a href="https://www.youtube.com/watch?v=HuN15mDKakk" target="_blank">
-                        <i class="fa-solid fa-video"></i> Watch Trailer
-                    </a>
-                </div>
-            </div>
+            <table>
+                <tr>
+                    <th>My Choices</th>
+                    <th>Trailer</th>
+                    <th>Sam's Choices</th>
+                    <th>Trailer</th>
+                </tr>
+                <tr>
+                    <td>Your Name</td>
+                    <td><a href="https://www.youtube.com/watch?v=xU47nhruN-Q" target="_blank">Watch Trailer</a></td>
+                    <td>Orange</td>
+                    <td><a href="https://www.youtube.com/watch?v=G9CzaN3WyKs" target="_blank">Watch Trailer</a></td>
+                </tr>
+                <tr>
+                <td>Kaguya Sama: Love is War</td>
+                <td><a href="https://www.youtube.com/watch?v=rZ95aZmQu_8" target="_blank">Watch Trailer</a></td>
+                <td>Fruits Basket</td>
+                <td><a href="https://www.youtube.com/watch?v=Wz0P0mYYY0Q" target="_blank">Watch Trailer</a></td>
+                </tr>
+                <tr>
+                    <td>I Want to Eat Your Pancreas</td>
+                    <td><a href="https://www.youtube.com/watch?v=HuN15mDKakk" target="_blank">Watch Trailer</a></td>
+                    <td>Komi Can't Communicate</td>
+                    <td><a href="https://www.youtube.com/watch?v=tLdLTSnmnoA" target="_blank">Watch Trailer</a></td>
+                </tr>
+            </table>
         </section>
 
-        <section id="top-comedy" class="top-anime-grid-container">
+        <section id="top-comedy">
             <h2>Top Comedy Anime</h2>
-            <div>
-                <div class="grid-item">
-                    <h3>Sam's choice</h3>
-                    <h4>Spy x Family</h4>
-                    <img src="../images/spyxfam.webp" alt="A photo of I Want to Eat Your Pancreas" width="100%"
-                        height="auto">
-                    <a href="https://www.youtube.com/watch?v=6sosTNRw_uQ" target="_blank">
-                        <i class="fa-solid fa-video"></i> Watch Trailer
-                    </a>
-                    <h4>Way of the House Husband</h4>
-                    <img src="../images/househusband.jpg" alt="A photo of Way of the House Husband" width="100%"
-                        height="auto">
-                    <a href="https://www.youtube.com/watch?v=cvZ9thKolOA" target="_blank">
-                        <i class="fa-solid fa-video"></i> Watch Trailer
-                    </a>
-                    <h4>The Diasterous Life of Saiki K</h4>
-                    <img src="../images/saiki.webp" alt="A photo of The Diasterous Life of Saiki K" width="100%"
-                        height="auto">
-                    <a href="https://www.youtube.com/watch?v=RChRfCHWsOI" target="_blank">
-                        <i class="fa-solid fa-video"></i> Watch Trailer
-                    </a>
-                </div>
-
-                <div class="grid-item">
-                    <h3>My choice</h3>
-                    <h4>Sakamoto Days</h4>
-                    <img src="../images/sakamoto.jpg" alt="A photo of Sakamoto Days" width="100%" height="auto">
-                    <a href="https://www.youtube.com/watch?v=9TbmxbckSjE" target="_blank">
-                        <i class="fa-solid fa-video"></i> Watch Trailer
-                    </a>
-                    <h4>One Punch Man</h4>
-                    <img src="../images/onepunch.webp" alt="A photo of One Punch Man" width="100%" height="auto">
-                    <a href="https://www.youtube.com/watch?v=Poo5lqoWSGw" target="_blank">
-                        <i class="fa-solid fa-video"></i> Watch Trailer
-                    </a>
-                    <h4>The Daily Lives of High School Boys</h4>
-                    <img src="../images/dailylives.jpg" alt="A photo of The Daily Lives of High School Boys"
-                        width="100%" height="auto">
-                    <a href="https://www.youtube.com/watch?v=BsQj0RYzW98" target="_blank">
-                        <i class="fa-solid fa-video"></i> Watch Trailer
-                    </a>
-                </div>
-            </div>
+            <table>
+                <tr>
+                    <th>My Choices</th>
+                    <th>Trailer</th>
+                    <th>Sam's Choices</th>
+                    <th>Watch Trailer</th>
+                </tr>
+                <tr>
+                    <td>Sakamoto Days</td>
+                    <td><a href="https://www.youtube.com/watch?v=9TbmxbckSjE" target="_blank">Watch Trailer</a></td>
+                    <td>Spy x Family</td>
+                    <td><a href="https://www.youtube.com/watch?v=6sosTNRw_uQ" target="_blank">Watch Trailer</a></td>
+                </tr>
+                <tr>
+                    <td>One Punch Man</td>
+                    <td><a href="https://www.youtube.com/watch?v=Poo5lqoWSGw" target="_blank">Watch Trailer</a></td>
+                    <td>Way of the House Husband</td>
+                    <td><a href="https://www.youtube.com/watch?v=cvZ9thKolOA" target="_blank">Watch Trailer</a></td>
+                </tr>
+                <tr>
+                    <td>The Daily Lives of High School Boys</td>
+                    <td><a href="https://www.youtube.com/watch?v=BsQj0RYzW98" target="_blank">Watch Trailer</a></td>
+                    <td>The Diasterous Life of Saiki K</td>
+                    <td><a href="https://www.youtube.com/watch?v=FzrXYn7ztWY" target="_blank">Watch Trailer</a></td>
+                </tr>
+            </table>
         </section>
 
-        <section id="top-horror" class="top-anime-grid-container">
+        <!-- Top Horror Anime -->
+        <section id="top-horror">
             <h2>Top Horror Anime</h2>
-            <div>
-                <div class="grid-item">
-                    <h3>Sam's choice</h3>
-                    <h4>The Promised Neverland</h4>
-                    <img src="../images/promised-neverland.webp" alt="A photo of The Promised Neverland" width="100%"
-                        height="auto">
-                    <a href="https://www.youtube.com/watch?v=CV0p9X8878k" target="_blank">
-                        <i class="fa-solid fa-video"></i> Watch Trailer
-                    </a>
-                    <h4>Attack on Titan</h4>
-                    <img src="../images/aot.webp" alt="A photo of Attack on Titan" width="100%" height="auto">
-                    <a href="https://www.youtube.com/watch?v=n4Nj6Y_SNYI" target="_blank">
-                        <i class="fa-solid fa-video"></i> Watch Trailer
-                    </a>
-                    <h4>Tokyo Ghoul</h4>
-                    <img src="../images/tokyoghoul.jpg" alt="A photo of Tokyo Ghoul" width="100%" height="auto">
-                    <a href="https://www.youtube.com/watch?v=vGuQeQsoRgU" target="_blank">
-                        <i class="fa-solid fa-video"></i> Watch Trailer
-                    </a>
-                </div>
-
-                <div class="grid-item">
-                    <h3>My choice</h3>
-                    <h4>Danganronpa</h4>
-                    <img src="../images/danganronpa.jpg" alt="A photo of Danganronpa" width="100%" height="auto">
-                    <a href="https://www.youtube.com/watch?v=A4kBhsjt4fM" target="_blank">
-                        <i class="fa-solid fa-video"></i> Watch Trailer
-                    </a>
-                    <h4>Parasyte</h4>
-                    <img src="../images/parasyte.webp" alt="A photo of Parasyte" width="100%" height="auto">
-                    <a href="https://www.youtube.com/watch?v=rj63TDpaBWk" target="_blank">
-                        <i class="fa-solid fa-video"></i> Watch Trailer
-                    </a>
-                    <h4>Made in Abyss</h4>
-                    <img src="../images/made-in-abyss.jpg" alt="A photo of Made in Abyss" width="100%" height="auto">
-                    <a href="https://www.youtube.com/watch?v=kqBNQEUI8dM" target="_blank">
-                        <i class="fa-solid fa-video"></i> Watch Trailer
-                    </a>
-                </div>
-            </div>
+            <table>
+                <tr>
+                    <th>My Choices</th>
+                    <th>Trailer</th>
+                    <th>Sam's Choices</th>
+                    <th>Trailer</th>
+                </tr>
+                <tr>
+                    <td>Danganronpa</td>
+                    <td><a href="https://www.youtube.com/watch?v=A4kBhsjt4fM" target="_blank">Watch Trailer</a></td>
+                    <td>The Promised Neverland</td>
+                    <td><a href="https://www.youtube.com/watch?v=CV0p9X8878k" target="_blank">Watch Trailer</a></td>
+                </tr>
+                <tr>
+                    <td>Parasyte</td>
+                    <td><a href="https://www.youtube.com/watch?v=rj63TDpaBWk" target="_blank">Watch Trailer</a></td>
+                    <td>Attack on Titan</td>
+                    <td><a href="https://www.youtube.com/watch?v=n4Nj6Y_SNYI" target="_blank">Watch Trailer</a></td>
+                </tr>
+                <tr>
+                    <td>Made in Abyss</td>
+                    <td><a href="https://www.youtube.com/watch?v=kqBNQEUI8dM" target="_blank">Watch Trailer</a></td>
+                    <td>Tokyo Ghoul</td>
+                    <td><a href="https://www.youtube.com/watch?v=vGuQeQsoRgU" target="_blank">Watch Trailer</a></td>
+                </tr>
+            </table>
         </section>
 
-        <section id="top-beginners" class="top-anime-grid-container">
+        <!-- Top Anime for Beginners -->
+        <section id="top-beginners">
             <h2>Top Anime for Beginners</h2>
-            <div>
-
-                <div class="grid-item">
-                    <h3>Sam's choice</h3>
-                    <h4>Castlevania</h4>
-                    <img src="../images/castlevania.jpg" alt="A photo of Castlevania" width="100%" height="auto">
-                    <a href="https://www.youtube.com/watch?v=m3jNb7IdJHQ" target="_blank">
-                        <i class="fa-solid fa-video"></i> Watch Trailer
-                    </a>
-                    <h4>Avatar: The Last Airbender</h4>
-                    <img src="../images/avatar.webp" alt="A photo of Avatar: The Last Airbender" width="100%"
-                        height="auto">
-                    <a href="https://www.youtube.com/watch?v=7GebQL6RdOs" target="_blank">
-                        <i class="fa-solid fa-video"></i> Watch Trailer
-                    </a>
-                    <h4>Cyberpunk Edgerunners</h4>
-                    <img src="../images/cyberpunk.jpg" alt="A photo of Cyberpunk Edgerunners" width="100%"
-                        height="auto">
-                    <a href="https://www.youtube.com/watch?v=x4ztgjvfU60" target="_blank">
-                        <i class="fa-solid fa-video"></i> Watch Trailer
-                    </a>
-                </div>
-
-                <div class="grid-item">
-                    <h3>My choice</h3>
-                    <h4>Death Note</h4>
-                    <img src="../images/deathnote.jpg" alt="A photo of Death Note" width="100%" height="auto">
-                    <a href="https://www.youtube.com/watch?v=NlJZ-YgAt-c" target="_blank">
-                        <i class="fa-solid fa-video"></i> Watch Trailer
-                    </a>
-                    <h4>Ranking of Kings</h4>
-                    <img src="../images/ranking.jpg" alt="A photo of Ranking of Kings" width="100%" height="auto">
-                    <a href="https://www.youtube.com/watch?v=Tr1ahorojPg" target="_blank">
-                        <i class="fa-solid fa-video"></i> Watch Trailer
-                    </a>
-                    <h4>Dragon Ball Z</h4>
-                    <img src="../images/dbz.jpg" alt="A photo of Ranking of Kings" width="100%" height="auto">
-                    <a href="https://www.youtube.com/watch?v=kcmc5uvDgfA" target="_blank">
-                        <i class="fa-solid fa-video"></i> Watch Trailer
-                    </a>
-                </div>
-            </div>
+            <table>
+                <tr>
+                    <th>My Choices</th>
+                    <th>Trailer</th>
+                    <th>Sam's Choices</th>
+                    <th>Trailer</th>
+                </tr>
+                <tr>
+                    <td>Death Note</td>
+                    <td><a href="https://www.youtube.com/watch?v=NlJZ-YgAt-c" target="_blank">Watch Trailer</a></td>
+                    <td>Castlevania</td>
+                    <td><a href="https://www.youtube.com/watch?v=m3jNb7IdJHQ" target="_blank">Watch Trailer</a></td>
+                </tr>
+                <tr>
+                    <td>Ranking of Kings</td>
+                    <td><a href="https://www.youtube.com/watch?v=Tr1ahorojPg" target="_blank">Watch Trailer</a></td>
+                    <td>Avatar: The Last Airbender</td>
+                    <td><a href="https://www.youtube.com/watch?v=7GebQL6RdOs" target="_blank">Watch Trailer</a></td>
+                </tr>
+                <tr>
+                    <td>Dragon Ball Z</td>
+                    <td><a href="https://www.youtube.com/watch?v=kcmc5uvDgfA" target="_blank">Watch Trailer</a></td>
+                    <td>Cyberpunk Edgerunners</td>
+                    <td><a href="https://www.youtube.com/watch?v=x4ztgjvfU60" target="_blank">Watch Trailer</a></td>
+                </tr>
+            </table>
         </section>
 
         <a href="#top" id="back-to-top">Back to Top</a>
