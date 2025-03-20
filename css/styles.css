@@ -28,7 +28,7 @@ main {
 h1,
 h2 {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     color: #4a2c61;
 }
 
@@ -39,7 +39,7 @@ h1 {
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-family: 'Outfit', sans-serif;
 }
 
@@ -51,6 +51,8 @@ h2.no-center {
 p {
     font-size: 1.2rem;
     margin-bottom: 15px;
+    margin-bottom: 30px;
+    /* Increased bottom margin for more space */
 }
 
 /* Navigation Bar */
@@ -157,6 +159,8 @@ footer {
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     transition: grid-template-columns 0.2s ease-out;
+    margin-top: 30px;
+    /* Adds space between the paragraph and the grid */
 }
 
 .genres-grid-container .grid-item,
@@ -184,10 +188,10 @@ footer {
 
 .genres-grid-container .grid-item h2,
 .rec-grid-container .grid-item h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
     color: #4a2c61;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     text-align: center;
 }
 
@@ -241,7 +245,7 @@ ul li {
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 30px;
+    margin-top: 40px;
     background-color: #d6a9d6;
 }
 
@@ -251,6 +255,8 @@ table th {
     padding: 10px;
     text-align: center;
     border-bottom: 1px solid #ddd;
+    margin-top: 30px;
+    /* Adds space between paragraph and table heading */
 }
 
 table td {
@@ -268,17 +274,18 @@ table tr:nth-child(even) td {
 table tr:hover td {
     background-color: #4a2c61;
     color: white;
-    cursor: pointer;
 }
 
 /* Rating Star */
 .rating i {
-    color: #FFD700;
+    color: black;
     font-size: 30px;
 }
 
 /* Links and Hover Effects */
 a {
+    gap: 8px;
+    /* Adjust the space as needed */
     color: #8a4d9d;
     text-decoration: none;
     font-weight: bold;
@@ -289,7 +296,8 @@ a:hover {
 }
 
 .purple-text {
-    color: #8a4d9d;
+    color: #4a2c61;
+    font-weight: bold;
 }
 
 /* Back to Top Button */
@@ -327,7 +335,8 @@ a:hover {
         font-size: 0.9rem;
     }
 
-    table th, table td {
+    table th,
+    table td {
         padding: 8px;
     }
 }
@@ -359,8 +368,12 @@ a:hover {
         display: flex;
     }
 
-    h1{
+    h1 {
         font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
     }
 
     .genres-grid-container,
@@ -373,7 +386,8 @@ a:hover {
         font-size: 0.8rem;
     }
 
-    table th, table td {
+    table th,
+    table td {
         padding: 6px;
     }
 
@@ -395,8 +409,8 @@ a:hover {
 
     /* Rating Star */
     .rating i {
-        color: #FFD700;
-        font-size: 30px;
+        color: black;
+        font-size: 20px;
         align-items: center;
     }
 
