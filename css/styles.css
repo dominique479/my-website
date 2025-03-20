@@ -322,6 +322,14 @@ a:hover {
     .rec-grid-container {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    table th, table td {
+        padding: 8px;
+    }
 }
 
 
@@ -362,4 +370,29 @@ a:hover {
         grid-template-columns: 1fr;
         gap: 15px;
     }
+
+    table {
+        font-size: 0.8rem;
+    }
+
+    table th, table td {
+        padding: 6px;
+    }
+
+    /* Making tables more scrollable on smaller screens */
+    .table-container {
+        overflow-x: auto;
+    }
+
+    table {
+        width: 100%;
+        display: block;
+        border-collapse: collapse;
+    }
+
+    table th,
+    table td {
+        text-align: left;
+    }
+
 }
