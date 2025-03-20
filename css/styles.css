@@ -359,10 +359,8 @@ a:hover {
         display: flex;
     }
 
-    /* Back to Top Button */
-    #back-to-top {
-        right: 10px;
-        bottom: 10px;
+    h1{
+        font-size: 2rem;
     }
 
     .genres-grid-container,
@@ -393,6 +391,19 @@ a:hover {
     table th,
     table td {
         text-align: left;
+    }
+
+    /* Rating Star */
+    .rating i {
+        color: #FFD700;
+        font-size: 30px;
+        align-items: center;
+    }
+
+    /* Back to Top Button */
+    #back-to-top {
+        right: 10px;
+        bottom: 10px;
     }
 
 }
