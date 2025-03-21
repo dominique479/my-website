@@ -265,9 +265,14 @@ table tr:nth-child(even) td {
     background-color: #d6a9d6;
 }
 
+table tr:hover td {
+    background-color: #4a2c61;
+    color: white;
+}
+
 /* Rating Star */
 .rating i {
-    color: #FFD700;
+    color: black;
     font-size: 30px;
 }
 
